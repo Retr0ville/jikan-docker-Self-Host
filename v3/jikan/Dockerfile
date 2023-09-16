@@ -9,6 +9,6 @@ RUN	apt-get update && apt-get install -y \
 RUN	git clone --branch=v3 --depth=1 https://github.com/Retr0ville/Jikan-at-v3-SelfHost.git . \
 	&& composer require 'composer/package-versions-deprecated' \
 	&& composer install --prefer-dist --no-progress --classmap-authoritative  --no-interaction \
-	&& composer update jikan-me/jikan
+	&& composer update Jikan-at-v3-SelfHost/jikan
 ADD	.env	/run-jikan.sh	./
 ENTRYPOINT	["./run-jikan.sh"]
